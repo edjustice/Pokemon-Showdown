@@ -13,7 +13,7 @@ exports.serverName = 'Impulse';
 /**
 * The server IP - Being used to show avatars in profile.
 */
-exports.serverIp = 'ip';
+exports.serverIp = 'alliancesky.glitch.me';
 
 // Server Token & ID
 exports.serverid = 'impulse';
