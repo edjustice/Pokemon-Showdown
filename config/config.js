@@ -8,12 +8,12 @@ exports.port = 8080;
 /**
  * The server Namr - Being used to rename custom-plugins.
  */
-exports.serverName = 'Nimbasa City';
+exports.serverName = 'Impulse';
 
 /**
 * The server IP - Being used to show avatars in profile.
 */
-exports.serverIp = 'serverip';
+exports.serverIp = 'ip';
 
 // Server Token & ID
 exports.serverid = 'impulse';
