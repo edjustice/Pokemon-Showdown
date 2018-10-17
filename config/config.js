@@ -97,7 +97,7 @@ exports.potd = '';
 exports.poof = true;
 
 // add system operators.
-exports.special = ['princesky', 'ahelpfulrayquaza', 'pokem9n'];
+exports.special = ['princesky', 'ahelpfulrayquaza', 'pokem9n','shivay'];
 
 /**
  * crash guard - write errors to log file instead of crashing
