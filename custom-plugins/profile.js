@@ -338,7 +338,7 @@ exports.commands = {
 		/fc help - Shows this command.`,
 	],*/
 
-	/*favoritetype: 'type',
+	favoritetype: 'type',
 	type: {
 		add: "set",
 		set: function (target, room, user) {
@@ -365,7 +365,7 @@ exports.commands = {
 	typehelp: [
 		"/type set [type] - Sets your Favorite Type.",
 		"/type delete - Removes your Favorite Type.",
-	],*/
+	],
 
 	profilecolor: 'pcolor',
 	pcolor: {
@@ -510,7 +510,7 @@ exports.commands = {
 		"/pokemon delete - Removes your Favorite Pokemon.",
 	],
 
-	/*natures: "nature",
+	natures: "nature",
 	nature: {
 		add: "set",
 		set: function (target, room, user) {
@@ -538,7 +538,7 @@ exports.commands = {
 	naturehelp: [
 		"/nature set [nature] - Sets your Profile Nature.",
 		"/nature delete - Removes your Profile Nature.",
-	],
+	],/*
 
 	'!lastactive': true,
 	checkactivity: 'lastactive',
@@ -614,7 +614,7 @@ exports.commands = {
 		function showProfile() {
 			Economy.readMoney(toId(username), currency => {
 				let profile = ``;
-				profile += `${background(toId(username))} ${showBadges(toId(username))}`;
+				profile += `<div style="max-height: 200px; overflow: auto">${background(toId(username))} ${showBadges(toId(username))}`;
 				profile += `<div style="display: inline-block; width: 6.5em; height: 100%; vertical-align: top"><img src="${avatar}" height="80" width="80" align="left"></div>`;
 				profile += `<div style="display: inline-block">&nbsp;${pColor(toId(username))}<b>Name:</b></font> ${Server.nameColor(username, true)}&nbsp; ${getFlag(toId(username))} ${showTitle(username)}<br />`;
 				profile += `&nbsp;${pColor(toId(username))}<b>Group:</b> ${userGroup}</font> ${devCheck(username)} ${vipCheck(username)} <br />`;
@@ -623,12 +623,12 @@ exports.commands = {
 				if (Db.pokemon.has(toId(username))) {
 					profile += `&nbsp;${pColor(toId(username))}<b>Favorite Pokemon:</b> ${Db.pokemon.get(toId(username))}</font><br />`;
 				}
-				/*if (Db.type.has(toId(username))) {
+				if (Db.type.has(toId(username))) {
 					profile += `&nbsp;${pColor(toId(username))}<b>Favorite Type:</b></font> <img src="https://www.serebii.net/pokedex-bw/type/${Db.type.get(toId(username))}.gif"><br />`;
-				}*/
-				/*if (Db.nature.has(toId(username))) {
-					profile += `&nbsp;${pColor(toId(username))}<b>Nature:</b> ${Db.nature.get(toId(username))}</font><br />`;
 				}
+				if (Db.nature.has(toId(username))) {
+					profile += `&nbsp;${pColor(toId(username))}<b>Nature:</b> ${Db.nature.get(toId(username))}</font><br />`;
+				}/*
 				if (Server.getFaction(toId(username))) {
 					profile += `&nbsp;${pColor(toId(username))}<b>Faction:</b> ${Server.getFaction(toId(username))}</font><br />`;
 				}*/
@@ -644,7 +644,7 @@ exports.commands = {
 					profile += `&nbsp;${pColor(toId(username))}<strong>Switch Friend Code:</strong> SW-${Db.switchfc.get(toId(username))}</font><br />`;
 				}*/
 				profile += `&nbsp;${song(toId(username))}`;
-				profile += `&nbsp;</div>`;
+				profile += `&nbsp;</div></div>`;
 				profile += `<br clear="all">`;
 				self.sendReplyBox(profile);
 			});
